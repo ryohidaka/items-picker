@@ -2,7 +2,7 @@ import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.ts";
-import { getRandomItem } from "..";
+import { getRandomCombination } from "..";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
@@ -32,5 +32,5 @@ const items = [
   { id: 5, value: 500 },
 ];
 
-const randomItem = getRandomItem(items, 1000, "value");
-console.log(randomItem);
+const result = getRandomCombination(items, "value", 1000);
+console.log(result);
