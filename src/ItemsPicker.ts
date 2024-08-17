@@ -36,17 +36,25 @@ export function getRandomCombination<T>(
   items: T[],
   key: keyof T,
   maxSum: number,
+  allowDuplicates: boolean = true,
 ): T[] {
   const combination: T[] = [];
   let remainingSum = maxSum;
+  const usedItems = new Set<T>();
 
   while (remainingSum > 0) {
     const item = getRandomItem(items, remainingSum, key);
     if (!item) break;
 
+    if (!allowDuplicates && usedItems.has(item)) continue;
+
     const value = item[key] as number;
     combination.push(item);
     remainingSum -= value;
+
+    if (!allowDuplicates) {
+      usedItems.add(item);
+    }
   }
 
   return combination;
