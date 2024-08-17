@@ -2,6 +2,7 @@ import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.ts";
+import { getRandomItem } from "..";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
@@ -22,3 +23,14 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 `;
 
 setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
+
+const items = [
+  { id: 1, value: 100 },
+  { id: 2, value: 200 },
+  { id: 3, value: 300 },
+  { id: 4, value: 400 },
+  { id: 5, value: 500 },
+];
+
+const randomItem = getRandomItem(items, 1000, "value");
+console.log(randomItem);
