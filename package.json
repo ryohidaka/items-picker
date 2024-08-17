@@ -2,7 +2,11 @@
   "name": "items-picker",
   "version": "0.0.0",
   "description": "Get a random combination from a list of items.",
-  "keywords": [],
+  "keywords": [
+    "random",
+    "array",
+    "combination"
+  ],
   "type": "module",
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
