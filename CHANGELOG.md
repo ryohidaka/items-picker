@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/ryohidaka/items-picker/compare/v0.1.0...v0.1.1) (2024-09-03)
+
+
+### Bug Fixes
+
+* Fixed a bug that caused an infinite loop. ([cd48741](https://github.com/ryohidaka/items-picker/commit/cd4874149a811ebeff5a0ac31e664668bf3e4be7))
+
 ## 0.1.0 (2024-08-17)
 
 
